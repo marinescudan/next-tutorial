@@ -11,6 +11,8 @@ export default async function UsersPage() {
     const userData: Promise<User[]> = getAllUsers()
     const users = await userData
 
+    console.log('users');
+
     const content = (
         <section>
             <h2>
@@ -29,7 +31,5 @@ export default async function UsersPage() {
             })}
         </section>
     )
-    return (
-        <div>UsersPage</div>
-    )
+    return content
 }
